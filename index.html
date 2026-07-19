@@ -1,93 +1,702 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShadowDragon_139 Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <!-- Primary SEO & meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#09090B" />
+  <meta name="description" content="SHADOWDRAGON_139 — Roblox QA Tester, Game Scout, Community Manager, Discord Specialist. Professional QA, community leadership, and game scouting services." />
+  <meta name="keywords" content="Roblox, QA, Game Scout, Discord, Community Manager, Bug Reports, Testing" />
+  <meta name="author" content="SHADOWDRAGON_139" />
+  <title>SHADOWDRAGON_139 — Roblox QA Tester & Community Manager</title>
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="SHADOWDRAGON_139 — Roblox QA Tester & Community Manager" />
+  <meta property="og:description" content="Professional QA testing, community management and game scouting for Roblox experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SHADOWDRAGON_139" />
+  <!-- No external images used — placeholder visuals are inline for performance -->
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://shadowdragon139.github.io/" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Accessibility: prefer-reduced-motion handling -->
+  <script>
+    // Small inline script to apply reduced-motion preference quickly for first paint
+    (function(){
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('reduced-motion');
+      }
+    })();
+  </script>
 </head>
-<body>
-<header class="hero">
-    <h1>SHADOWDRAGON_139</h1>
-    <p>Roblox QA Tester • Game Scout • Community Manager • Discord Specialist</p>
-    <a class="button" href="https://discord.com/users/" target="_blank">Hire Me on Discord: shadowdragon_139</a>
-</header>
+<body id="top" class="dark">
 
-<section>
-<h2>About Me</h2>
-<p>I am a passionate Roblox QA Tester and Discord community specialist focused on helping developers create polished experiences through detailed testing, professional moderation, and community growth.</p>
-</section>
+  <!-- Loading screen (full-screen) -->
+  <div id="loader" aria-hidden="false">
+    <div class="loader-inner" role="status" aria-live="polite" aria-label="Loading portfolio">
+      <svg class="loader-logo" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#7C3AED"/>
+            <stop offset="100%" stop-color="#2563EB"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="40" stroke="url(#g1)" stroke-width="6" fill="rgba(255,255,255,0.02)"/>
+        <text x="50" y="56" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto" font-size="18" fill="#fff">SD_139</text>
+      </svg>
+      <div class="loading-bar" aria-hidden="true"><span></span></div>
+      <p class="loading-text">Preparing a smooth experience…</p>
+    </div>
+  </div>
 
-<section>
-<h2>Roblox QA Testing</h2>
-<ul>
-<li>Gameplay Testing</li>
-<li>UI/UX Testing</li>
-<li>Feature Verification</li>
-<li>Regression Testing</li>
-<li>Mobile Testing</li>
-<li>Multiplayer Testing</li>
-<li>Performance Feedback</li>
-</ul>
-<p>Worked on projects such as Marble Rails, golf kart experiences, space-themed games, and simulator games. Experience includes collaboration with communities like PlayVerse and other growing studios.</p>
-</section>
+  <!-- Animated gradient background + particles canvas -->
+  <div id="bg-gradient" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
-<section>
-<h2>Bug Reporting</h2>
-<p>Clear reports with reproduction steps, expected vs actual results, severity level, device information, and screenshots/videos.</p>
-</section>
+  <!-- Mouse glow -->
+  <div id="mouse-glow" aria-hidden="true"></div>
 
-<section>
-<h2>Game Scouting</h2>
-<ul>
-<li>CCU and engagement analysis</li>
-<li>Retention and growth potential</li>
-<li>Gameplay quality assessment</li>
-<li>Monetization opportunities</li>
-</ul>
-</section>
+  <!-- Page (main) -->
+  <header id="header" class="nav-glass" role="banner">
+    <nav class="container nav" role="navigation" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Home — SHADOWDRAGON_139">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="bm" x1="0" x2="1"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient>
+          </defs>
+          <rect x="2" y="4" width="20" height="16" rx="4" fill="url(#bm)"></rect>
+          <text x="12" y="16" text-anchor="middle" font-size="10" fill="#08101A" font-family="monospace">SD</text>
+        </svg>
+        <span class="brand-text">SHADOWDRAGON_139</span>
+      </a>
 
-<section>
-<h2>Discord Moderation & Bot Configuration</h2>
-<ul>
-<li>Server setup and organization</li>
-<li>Roles & permissions</li>
-<li>Auto-moderation</li>
-<li>Verification systems</li>
-<li>Ticket and giveaway systems</li>
-<li>Bloxlink, Arcane, Dyno, Wick, Carl-bot</li>
-</ul>
-</section>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
 
-<section>
-<h2>Community Management</h2>
-<ul>
-<li>Events & Giveaways</li>
-<li>Member engagement</li>
-<li>Staff coordination</li>
-<li>Feedback collection</li>
-<li>Announcements & growth strategies</li>
-</ul>
-</section>
+      <ul id="nav-menu" class="nav-links" role="menubar">
+        <li role="none"><a class="nav-link active" href="#home" role="menuitem">Home</a></li>
+        <li role="none"><a class="nav-link" href="#about" role="menuitem">About</a></li>
+        <li role="none"><a class="nav-link" href="#qa" role="menuitem">QA</a></li>
+        <li role="none"><a class="nav-link" href="#discord" role="menuitem">Discord</a></li>
+        <li role="none"><a class="nav-link" href="#projects" role="menuitem">Projects</a></li>
+        <li role="none"><a class="nav-link" href="#skills" role="menuitem">Skills</a></li>
+        <li role="none"><a class="nav-link" href="#contact" role="menuitem">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section>
-<h2>Projects</h2>
-<div class="card">Marble Rails</div>
-<div class="card">Golf Kart Experiences</div>
-<div class="card">Space-Themed Games</div>
-<div class="card">Simulator Games</div>
-</section>
+  <main id="main" role="main">
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-card glass">
+          <div class="hero-avatar" aria-hidden="true">
+            <!-- avatar placeholder -->
+            <svg class="avatar-svg" viewBox="0 0 100 100" role="img" aria-label="profile placeholder">
+              <defs>
+                <linearGradient id="av" x1="0" x2="1"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient>
+              </defs>
+              <circle cx="50" cy="36" r="20" fill="rgba(255,255,255,0.06)"></circle>
+              <circle cx="50" cy="36" r="18" stroke="url(#av)" stroke-width="3" fill="transparent"></circle>
+              <rect x="20" y="60" width="60" height="24" rx="6" fill="rgba(255,255,255,0.02)"></rect>
+            </svg>
+          </div>
 
-<section>
-<h2>Skills</h2>
-<p>QA Testing ★★★★★</p>
-<p>Community Management ★★★★★</p>
-<p>Discord Moderation ★★★★★</p>
-<p>Bot Configuration ★★★★★</p>
-</section>
+          <div class="hero-content">
+            <h1 id="hero-heading" class="hero-title">SHADOWDRAGON_139</h1>
+            <p class="hero-subtitle" aria-hidden="true">
+              <span class="typed" data-words='["Roblox QA Tester","Game Scout","Community Manager","Discord Specialist"]'></span>
+            </p>
 
-<footer>
-<p>Contact: shadowdragon_139</p>
-</footer>
+            <p class="hero-description">Professional QA testing, community leadership, and game scouting focused on Roblox experiences — clear reports, actionable feedback, and reliable community operations.</p>
+
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="#contact">Hire Me</a>
+              <a class="btn btn-ghost" href="#projects">View Projects</a>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+              <span class="mouse"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats" aria-hidden="true">
+          <div class="stat glass">
+            <span class="stat-number" data-counter="128">0</span>
+            <span class="stat-label">Projects Tested</span>
+          </div>
+          <div class="stat glass">
+            <span class="stat-number" data-counter="24">0</span>
+            <span class="stat-label">Communities Managed</span>
+          </div>
+          <div class="stat glass">
+            <span class="stat-number" data-counter="32">0</span>
+            <span class="stat-label">Discord Servers Built</span>
+          </div>
+          <div class="stat glass">
+            <span class="stat-number" data-counter="40">0</span>
+            <span class="stat-label">Skills</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <div class="about-grid">
+        <aside class="profile-card glass" aria-label="Profile card of SHADOWDRAGON_139">
+          <div class="profile-avatar" aria-hidden="true">
+            <svg viewBox="0 0 100 100" class="avatar-large" role="img" aria-label="Profile avatar placeholder">
+              <circle cx="50" cy="36" r="28" fill="rgba(255,255,255,0.02)"></circle>
+              <circle cx="50" cy="36" r="26" stroke="rgba(124,58,237,0.9)" stroke-width="3" fill="transparent"></circle>
+            </svg>
+          </div>
+          <h3 class="profile-name">SHADOWDRAGON_139</h3>
+          <p class="profile-role">Roblox QA Tester • Discord Community Manager • Game Scout</p>
+          <div class="profile-links">
+            <button class="icon-btn" title="Discord" aria-label="Discord placeholder">
+              <!-- placeholder icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#9CA3AF" d="M12 2C7 2 3.5 5 3.5 9.3v3.4C3.5 18 7 22 12 22s8.5-4 8.5-9.3V9.3C20.5 5 17 2 12 2z"/></svg>
+            </button>
+            <button class="icon-btn" title="GitHub" aria-label="GitHub placeholder">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#9CA3AF" d="M12 2C6.5 2 2 6.3 2 11.7c0 4.2 2.7 7.7 6.5 8.9.5.1.7-.2.7-.5v-1.9c-2.7.6-3.2-1.1-3.2-1.1-.4-1.1-1-1.4-1-1.4-.8-.5.1-.5.1-.5.9.1 1.3.9 1.3.9.8 1.4 2 1 2.6.8.1-.6.3-1 .6-1.2-2.2-.2-4.5-1.1-4.5-5 0-1.1.4-2 1-2.8-.1-.2-.5-1 .1-2.1 0 0 .8-.2 2.6 1 1-.3 2-.5 3-.5s2 .2 3 .5c1.8-1.2 2.6-1 2.6-1 .6 1.1.2 1.9.1 2.1.7.8 1 1.7 1 2.8 0 3.9-2.4 4.8-4.6 5 .3.3.6.9.6 1.9v2.8c0 .3.2.6.7.5 3.8-1.2 6.5-4.7 6.5-8.9C22 6.3 17.5 2 12 2z"/></svg>
+            </button>
+            <button class="icon-btn" title="Roblox" aria-label="Roblox placeholder">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" fill="#9CA3AF" rx="3"/></svg>
+            </button>
+          </div>
+        </aside>
+
+        <div class="about-content">
+          <h3>About Me</h3>
+          <p>I am passionate about helping Roblox developers improve their games through detailed QA testing, structured bug reports, gameplay analysis, and quality feedback. I also build and support Discord communities, configure bots, and help maintain healthy, engaged groups for players and developers. I strive to deliver clear, actionable results and collaborate effectively with teams.</p>
+
+          <div class="stats-grid" aria-hidden="true">
+            <div class="stat-card glass">
+              <strong class="stat-value" data-counter="128">0</strong>
+              <span class="stat-label">Projects Tested</span>
+            </div>
+            <div class="stat-card glass">
+              <strong class="stat-value" data-counter="24">0</strong>
+              <span class="stat-label">Communities Managed</span>
+            </div>
+            <div class="stat-card glass">
+              <strong class="stat-value" data-counter="32">0</strong>
+              <span class="stat-label">Discord Servers Built</span>
+            </div>
+            <div class="stat-card glass">
+              <strong class="stat-value" data-counter="40">0</strong>
+              <span class="stat-label">Verified Skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROBLOX QA TESTING SECTION -->
+    <section id="qa" class="section container" aria-labelledby="qa-title">
+      <h2 id="qa-title" class="section-title">Roblox Quality Assurance</h2>
+      <p class="section-sub">Helping developers deliver polished, enjoyable, and stable Roblox experiences through structured testing and actionable feedback.</p>
+
+      <div class="cards-grid">
+        <!-- Card template, 8 items -->
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="s1-title">
+          <div class="card-icon" aria-hidden="true">🎮</div>
+          <h3 id="s1-title">Gameplay Testing</h3>
+          <p>Core gameplay verification, mechanics validation and balance feedback for a smooth player experience.</p>
+          <a class="btn btn-link" href="#projects">Learn More</a>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="s2-title">
+          <div class="card-icon" aria-hidden="true">🖥️</div>
+          <h3 id="s2-title">UI / UX Testing</h3>
+          <p>Interface testing, accessibility checks, and navigation feedback to improve usability.</p>
+          <a class="btn btn-link" href="#projects">Learn More</a>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="s3-title">
+          <div class="card-icon" aria-hidden="true">🐞</div>
+          <h3 id="s3-title">Bug Reporting</h3>
+          <p>Clear reproduction steps, severity, and evidence to speed up fixes and validate results.</p>
+          <a class="btn btn-link" href="#projects">Learn More</a>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="s4-title">
+          <div class="card-icon" aria-hidden="true">🔁</div>
+          <h3 id="s4-title">Regression Testing</h3>
+          <p>Verify fixed issues and prevent regressions as features evolve.</p>
+          <a class="btn btn-link" href="#projects">Learn More</a>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="s5-title">
+          <div class="card-icon" aria-hidden="true">📱</div>
+          <h3 id="s5-title">Mobile Testing</h3>
+          <p>Android and mobile checks focusing on performance and touch controls.</p>
+          <a class="btn btn-link" href="#projects">Learn More</a>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="s6-title">
+          <div class="card-icon" aria-hidden="true">👥</div>
+          <h3 id="s6-title">Multiplayer Testing</h3>
+          <p>Replication, networking, and synchronization tests for multi-user experiences.</p>
+          <a class="btn btn-link" href="#projects">Learn More</a>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="s7-title">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h3 id="s7-title">Performance Testing</h3>
+          <p>FPS observations, optimization suggestions, and memory issue identification.</p>
+          <a class="btn btn-link" href="#projects">Learn More</a>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="s8-title">
+          <div class="card-icon" aria-hidden="true">✅</div>
+          <h3 id="s8-title">Feature Verification</h3>
+          <p>Validate new updates and confirm consistent gameplay behavior.</p>
+          <a class="btn btn-link" href="#projects">Learn More</a>
+        </article>
+      </div>
+
+      <!-- QA timeline -->
+      <div class="timeline horizontal reveal" aria-hidden="true">
+        <div class="timeline-step">Planning</div>
+        <div class="timeline-step">Testing</div>
+        <div class="timeline-step">Bug Discovery</div>
+        <div class="timeline-step">Documentation</div>
+        <div class="timeline-step">Developer Review</div>
+        <div class="timeline-step">Retesting</div>
+        <div class="timeline-step">Verification</div>
+        <div class="timeline-step">Release</div>
+      </div>
+    </section>
+
+    <!-- DISCORD MANAGEMENT -->
+    <section id="discord" class="section container" aria-labelledby="discord-title">
+      <h2 id="discord-title" class="section-title">Discord Management</h2>
+      <p class="section-sub">Building professional, organized and engaging Discord communities.</p>
+
+      <div class="cards-grid">
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="d1">
+          <div class="card-icon" aria-hidden="true">⚖️</div>
+          <h3 id="d1">Rule Enforcement</h3>
+          <p>Professional moderation and community safety.</p>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="d2">
+          <div class="card-icon" aria-hidden="true">🤝</div>
+          <h3 id="d2">Conflict Resolution</h3>
+          <p>Calm communication and fair decisions when handling disputes.</p>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="d3">
+          <div class="card-icon" aria-hidden="true">💬</div>
+          <h3 id="d3">Member Support</h3>
+          <p>Assist new members and improve support response quality.</p>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="d4">
+          <div class="card-icon" aria-hidden="true">🧑‍💼</div>
+          <h3 id="d4">Staff Coordination</h3>
+          <p>Organize and support moderator teams for consistent coverage.</p>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="d5">
+          <div class="card-icon" aria-hidden="true">🔒</div>
+          <h3 id="d5">Community Safety</h3>
+          <p>Reduce spam and improve safety measures.</p>
+        </article>
+
+        <article class="service-card glass reveal" tabindex="0" aria-labelledby="d6">
+          <div class="card-icon" aria-hidden="true">📄</div>
+          <h3 id="d6">Reports Management</h3>
+          <p>Review and escalate reports for consistent moderation quality.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMUNITY MANAGEMENT -->
+    <section id="community" class="section container" aria-labelledby="community-title">
+      <h2 id="community-title" class="section-title">Community Management</h2>
+      <p class="section-sub">Helping communities stay active, organized and welcoming through engagement and leadership.</p>
+
+      <div class="cards-grid">
+        <article class="cm-card glass reveal">
+          <div class="card-icon">🎉</div>
+          <h3>Event Planning</h3>
+          <p>Community events, game nights and special activities.</p>
+        </article>
+        <article class="cm-card glass reveal">
+          <div class="card-icon">🎁</div>
+          <h3>Giveaway Management</h3>
+          <p>Organize giveaways and fair winner selection.</p>
+        </article>
+        <article class="cm-card glass reveal">
+          <div class="card-icon">📈</div>
+          <h3>Community Engagement</h3>
+          <p>Increase activity and encourage participation.</p>
+        </article>
+        <article class="cm-card glass reveal">
+          <div class="card-icon">🧭</div>
+          <h3>Staff Management</h3>
+          <p>Coordinate moderators and delegate tasks.</p>
+        </article>
+        <article class="cm-card glass reveal">
+          <div class="card-icon">📝</div>
+          <h3>Feedback Collection</h3>
+          <p>Gather suggestions and report community opinions.</p>
+        </article>
+        <article class="cm-card glass reveal">
+          <div class="card-icon">📢</div>
+          <h3>Announcements</h3>
+          <p>Professional announcements and community news.</p>
+        </article>
+      </div>
+
+      <div class="approach-timeline reveal" aria-hidden="true">
+        <div class="approach-step">Listen</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Plan</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Organize</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Support</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Improve</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Grow</div>
+      </div>
+    </section>
+
+    <!-- BOT CONFIGURATION -->
+    <section id="bots" class="section container" aria-labelledby="bots-title">
+      <h2 id="bots-title" class="section-title">Bot Configuration</h2>
+      <p class="section-sub">Experience building and configuring professional Discord servers with a suite of bots and systems.</p>
+
+      <div class="cards-grid">
+        <!-- List of important systems as cards -->
+        <article class="bot-card glass reveal"><div class="card-icon">🔗</div><h3>Bloxlink</h3><p>Player linking and verification integration for Roblox accounts.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">🤖</div><h3>Carl-bot</h3><p>Automations: reaction roles, logging and mod utilities.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">🛡️</div><h3>Dyno</h3><p>Moderation and auto-moderation features.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">🔮</div><h3>Arcane</h3><p>Leveling and community engagement setups.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">🔥</div><h3>Wick</h3><p>Strong anti-abuse and security tools.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">📊</div><h3>ServerStats</h3><p>Live server metrics and counters.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">🎟️</div><h3>Ticket Systems</h3><p>Support ticket flow design and management.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">🎉</div><h3>Giveaway Systems</h3><p>Fair automated giveaway setups with logs.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">✅</div><h3>Verification Systems</h3><p>Role gating, verification flows and linking checks.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">📝</div><h3>Logging</h3><p>Chat and moderation logs for accountability.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">🎚️</div><h3>Reaction Roles</h3><p>Role assignment via reactions and menus.</p></article>
+        <article class="bot-card glass reveal"><div class="card-icon">🏆</div><h3>Leveling</h3><p>Engagement progression systems and rewards.</p></article>
+      </div>
+
+      <div class="approach-timeline reveal" aria-hidden="true">
+        <div class="approach-step">Planning</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Server Structure</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Roles &amp; Permissions</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Bot Configuration</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Verification</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Testing</div>
+        <div class="approach-arrow">↓</div>
+        <div class="approach-step">Launch</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title">Projects</h2>
+      <p class="section-sub">Selected work where I contributed QA testing and community support.</p>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card glass reveal">
+          <div class="project-thumb" aria-hidden="true">
+            <svg viewBox="0 0 400 200" class="thumb-svg"><rect width="100%" height="100%" rx="10" fill="rgba(255,255,255,0.02)"/><text x="50%" y="50%" fill="rgba(255,255,255,0.06)" font-size="18" text-anchor="middle" dominant-baseline="middle">Thumbnail</text></svg>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <div class="project-icon">🔷</div>
+              <h3>Marble Rails</h3>
+              <span class="project-role">Role: QA Tester</span>
+            </div>
+            <ul class="project-list">
+              <li>Gameplay Testing</li>
+              <li>Bug Reporting</li>
+              <li>UI Testing</li>
+              <li>Feature Verification</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-primary">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card glass reveal">
+          <div class="project-thumb" aria-hidden="true"><svg viewBox="0 0 400 200" class="thumb-svg"><rect width="100%" height="100%" rx="10" fill="rgba(255,255,255,0.02)"/><text x="50%" y="50%" fill="rgba(255,255,255,0.06)" font-size="18" text-anchor="middle" dominant-baseline="middle">Thumbnail</text></svg></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <div class="project-icon">🚗</div>
+              <h3>Golf Kart Experiences</h3>
+              <span class="project-role">Role: QA Tester</span>
+            </div>
+            <ul class="project-list">
+              <li>Physics Testing</li>
+              <li>Multiplayer Testing</li>
+              <li>Gameplay Feedback</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-primary">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card glass reveal">
+          <div class="project-thumb" aria-hidden="true"><svg viewBox="0 0 400 200" class="thumb-svg"><rect width="100%" height="100%" rx="10" fill="rgba(255,255,255,0.02)"/><text x="50%" y="50%" fill="rgba(255,255,255,0.06)" font-size="18" text-anchor="middle" dominant-baseline="middle">Thumbnail</text></svg></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <div class="project-icon">🚀</div>
+              <h3>Space Experiences</h3>
+              <span class="project-role">Role: QA Tester</span>
+            </div>
+            <ul class="project-list">
+              <li>Performance Testing</li>
+              <li>Gameplay Verification</li>
+              <li>UI Feedback</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-primary">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card glass reveal">
+          <div class="project-thumb" aria-hidden="true"><svg viewBox="0 0 400 200" class="thumb-svg"><rect width="100%" height="100%" rx="10" fill="rgba(255,255,255,0.02)"/><text x="50%" y="50%" fill="rgba(255,255,255,0.06)" font-size="18" text-anchor="middle" dominant-baseline="middle">Thumbnail</text></svg></div>
+          <div class="project-body">
+            <div class="project-meta">
+              <div class="project-icon">🕹️</div>
+              <h3>Simulator Games</h3>
+              <span class="project-role">Role: QA Tester</span>
+            </div>
+            <ul class="project-list">
+              <li>Progression Testing</li>
+              <li>Economy Review</li>
+              <li>User Experience</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-primary">View Details</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">Skills</h2>
+      <p class="section-sub">Core skills demonstrated through animated progress indicators.</p>
+
+      <div class="skills-grid">
+        <!-- Each skill uses an SVG circle for smooth animation -->
+        <div class="skill-card glass reveal" data-skill="90" aria-labelledby="skill1">
+          <svg class="skill-ring" viewBox="0 0 100 100" role="img" aria-label="Roblox QA Testing 90 percent">
+            <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="ring" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            <text x="50" y="54" text-anchor="middle" class="skill-percent">0%</text>
+          </svg>
+          <h3 id="skill1">Roblox QA Testing</h3>
+        </div>
+
+        <div class="skill-card glass reveal" data-skill="85" aria-labelledby="skill2">
+          <svg class="skill-ring" viewBox="0 0 100 100">
+            <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="ring" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            <text x="50" y="54" text-anchor="middle" class="skill-percent">0%</text>
+          </svg>
+          <h3 id="skill2">Bug Reporting</h3>
+        </div>
+
+        <div class="skill-card glass reveal" data-skill="88" aria-labelledby="skill3">
+          <svg class="skill-ring" viewBox="0 0 100 100">
+            <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="ring" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            <text x="50" y="54" text-anchor="middle" class="skill-percent">0%</text>
+          </svg>
+          <h3 id="skill3">Discord Moderation</h3>
+        </div>
+
+        <div class="skill-card glass reveal" data-skill="80" aria-labelledby="skill4">
+          <svg class="skill-ring" viewBox="0 0 100 100">
+            <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="ring" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            <text x="50" y="54" text-anchor="middle" class="skill-percent">0%</text>
+          </svg>
+          <h3 id="skill4">Community Management</h3>
+        </div>
+
+        <div class="skill-card glass reveal" data-skill="75" aria-labelledby="skill5">
+          <svg class="skill-ring" viewBox="0 0 100 100">
+            <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="ring" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            <text x="50" y="54" text-anchor="middle" class="skill-percent">0%</text>
+          </svg>
+          <h3 id="skill5">Bot Configuration</h3>
+        </div>
+
+        <div class="skill-card glass reveal" data-skill="82" aria-labelledby="skill6">
+          <svg class="skill-ring" viewBox="0 0 100 100">
+            <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="ring" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            <text x="50" y="54" text-anchor="middle" class="skill-percent">0%</text>
+          </svg>
+          <h3 id="skill6">Game Scouting</h3>
+        </div>
+
+        <div class="skill-card glass reveal" data-skill="90" aria-labelledby="skill7">
+          <svg class="skill-ring" viewBox="0 0 100 100">
+            <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="ring" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            <text x="50" y="54" text-anchor="middle" class="skill-percent">0%</text>
+          </svg>
+          <h3 id="skill7">Communication</h3>
+        </div>
+
+        <div class="skill-card glass reveal" data-skill="86" aria-labelledby="skill8">
+          <svg class="skill-ring" viewBox="0 0 100 100">
+            <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="ring" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            <text x="50" y="54" text-anchor="middle" class="skill-percent">0%</text>
+          </svg>
+          <h3 id="skill8">Problem Solving</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME SCOUTING -->
+    <section id="scout" class="section container" aria-labelledby="scout-title">
+      <h2 id="scout-title" class="section-title">Roblox Game Scouting</h2>
+      <p class="section-sub">Identifying promising Roblox experiences through research, analytics and gameplay evaluation. I am building experience as a Game Scout while continuously improving my understanding of the platform.</p>
+
+      <div class="cards-grid">
+        <article class="scout-card glass reveal"><div class="card-icon">🔁</div><h3>Player Retention</h3><p>Analyze engagement, session quality, and replay value.</p></article>
+        <article class="scout-card glass reveal"><div class="card-icon">📈</div><h3>CCU Analysis</h3><p>Monitor concurrent player trends and peak activity.</p></article>
+        <article class="scout-card glass reveal"><div class="card-icon">🎯</div><h3>Gameplay Quality</h3><p>Assess gameplay loop, UX and replayability.</p></article>
+        <article class="scout-card glass reveal"><div class="card-icon">🌍</div><h3>Publishing Potential</h3><p>Evaluate market opportunity and audience fit.</p></article>
+        <article class="scout-card glass reveal"><div class="card-icon">💰</div><h3>Economy Review</h3><p>Review monetization and progression balance.</p></article>
+        <article class="scout-card glass reveal"><div class="card-icon">🗣️</div><h3>Community Analysis</h3><p>Analyze activity, feedback and social presence.</p></article>
+      </div>
+
+      <div class="analytics-dashboard reveal" aria-hidden="true">
+        <div class="dash-card glass">
+          <h4>Current Focus</h4>
+          <div class="dash-counter" data-count="3">0</div>
+        </div>
+        <div class="dash-card glass">
+          <h4>Research</h4>
+          <div class="dash-bar"><span style="width:60%"></span></div>
+        </div>
+        <div class="dash-card glass">
+          <h4>Game Evaluation</h4>
+          <div class="dash-bar"><span style="width:82%"></span></div>
+        </div>
+        <div class="dash-card glass">
+          <h4>Market Trends</h4>
+          <div class="dash-bar"><span style="width:45%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY / BOT / more sections done above -->
+
+    <!-- CONTACT (premium glassmorphism contact card) -->
+    <section id="contact" class="section container" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">Let's Work Together</h2>
+      <p class="section-sub">Interested in Roblox QA Testing, Discord Community Management or Game Scouting? Feel free to contact me.</p>
+
+      <div class="contact-wrap">
+        <div class="contact-card glass premium-card reveal" role="region" aria-label="Contact card">
+          <div class="contact-header">
+            <h3>Primary Contact</h3>
+            <p class="contact-primary"><strong>Discord:</strong> <span id="discord-username">shadowdragon_139</span></p>
+          </div>
+
+          <div class="contact-body">
+            <div class="contact-visual" aria-hidden="true">
+              <!-- soft glowing avatar -->
+              <svg viewBox="0 0 100 100" class="contact-avatar"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.02)"/></svg>
+            </div>
+
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="#contact" id="hire-me-btn">Hire Me</a>
+              <button class="btn btn-ghost" id="copy-discord" aria-label="Copy Discord username">Copy Discord Username</button>
+              <button class="btn btn-ghost" id="back-to-top" aria-label="Back to top">Back to Top</button>
+            </div>
+
+            <p class="contact-note">Prefer Discord? Add me or copy the username. For professional inquiries, click Hire Me to open an email draft.</p>
+          </div>
+        </div>
+
+        <div class="contact-info glass small-reveal">
+          <h4>Availability</h4>
+          <p>Open for collaborations, QA contracts and community consulting. Response times vary depending on workload; most inquires answered within 48 hours.</p>
+
+          <h4>Quick Links</h4>
+          <ul class="quick-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#discord">Discord Services</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- BACK TO TOP (floating) -->
+  <button id="floating-top" class="floating-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer-glass" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <strong>SHADOWDRAGON_139</strong>
+        <p>Roblox QA Tester • Community Manager • Game Scout • Discord Specialist</p>
+      </div>
+
+      <div class="footer-social" aria-label="Social links">
+        <a class="social-link" href="#" aria-label="Discord (placeholder)">
+          <!-- Discord placeholder -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#9CA3AF" d="M..."/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="GitHub (placeholder)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#9CA3AF" d="M..."/></svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Roblox (placeholder)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect fill="#9CA3AF" x="4" y="4" width="16" height="16" rx="3"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        <small>&copy; <span id="year"></span> SHADOWDRAGON_139. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page transition overlay -->
+  <div id="page-transition" aria-hidden="true"></div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
 </body>
 </html>
